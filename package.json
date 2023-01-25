@@ -1,6 +1,6 @@
 {
   "name": "@authnomicon/session",
-  "version": "0.0.4",
+  "version": "0.0.0",
   "description": "Session management components for the Authnomicon project.",
   "keywords": [
     "session"
@@ -30,15 +30,17 @@
   ],
   "main": "./app",
   "assembly": {
-    "namespace": "org.authnomicon/federated",
+    "namespace": "org.authnomicon/session",
     "components": [
-      "localidpschemefactory"
+      "authenticator"
     ]
   },
   "directories": {
     "com": "com"
   },
-  "dependencies": {},
+  "dependencies": {
+    "passport": "^0.6.0"
+  },
   "devDependencies": {
     "chai": "^4.3.4",
     "chai-express-handler": "^0.1.0",
