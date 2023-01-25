@@ -1,0 +1,54 @@
+{
+  "name": "@authnomicon/session",
+  "version": "0.0.4",
+  "description": "Session management components for the Authnomicon project.",
+  "keywords": [
+    "session"
+  ],
+  "author": {
+    "name": "Jared Hanson",
+    "email": "jaredhanson@gmail.com",
+    "url": "https://www.jaredhanson.me/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/authnomicon/session.git"
+  },
+  "bugs": {
+    "url": "https://github.com/authnomicon/session/issues"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/jaredhanson"
+  },
+  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  ],
+  "main": "./app",
+  "assembly": {
+    "namespace": "org.authnomicon/federated",
+    "components": [
+      "localidpschemefactory"
+    ]
+  },
+  "directories": {
+    "com": "com"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "chai-express-handler": "^0.1.0",
+    "make-node": "^0.3.0",
+    "mocha": "^9.1.3",
+    "proxyquire": "^2.1.3",
+    "sinon": "^11.1.2",
+    "sinon-chai": "^3.7.0"
+  },
+  "scripts": {
+    "test": "mocha --require ./test/bootstrap/node --recursive"
+  }
+}
