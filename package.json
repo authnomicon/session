@@ -32,7 +32,9 @@
   "assembly": {
     "namespace": "org.authnomicon/session",
     "components": [
-      "authenticator"
+      "authenticator",
+      "user/deserialize",
+      "user/serialize"
     ]
   },
   "directories": {

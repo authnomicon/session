@@ -1,21 +1,11 @@
-exports = module.exports = function(IoC, logger) {
-  // Load modules.
-  var passport = require('passport');
-  
-  
+// Module dependencies.
+var passport = require('passport');
+
+exports = module.exports = function(IoC, deserializeUser, serializeUser, logger) {
   var authenticator = new passport.Authenticator();
   
-  authenticator.serializeUser(function(user, cb) {
-    console.log('SERIALIZE!!!!');
-    
-    cb(null, user);
-  });
-
-  authenticator.deserializeUser(function(obj, cb) {
-    console.log('DESERIALIZE!!!!');
-    
-    cb(null, obj);
-  });
+  authenticator.serializeUser(serializeUser);
+  authenticator.deserializeUser(deserializeUser);
   
   return Promise.resolve(authenticator)
     .then(function(authenticator) {
@@ -70,4 +60,9 @@ exports = module.exports = function(IoC, logger) {
 
 exports['@singleton'] = true;
 exports['@implements'] = 'module:@authnomicon/session.Authenticator';
-exports['@require'] = [ '!container', 'http://i.bixbyjs.org/Logger' ];
+exports['@require'] = [
+  '!container',
+  'module:passport.Authenticator~deserializeUserFn',
+  'module:passport.Authenticator~serializeUserFn',
+  'http://i.bixbyjs.org/Logger'
+];
