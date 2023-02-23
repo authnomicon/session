@@ -1,11 +1,14 @@
 // Module dependencies.
 var passport = require('passport');
 
-exports = module.exports = function(IoC, deserializeUser, serializeUser, logger) {
+exports = module.exports = function(IoC, scheme, sessionManager, logger) {
   var authenticator = new passport.Authenticator();
   
-  authenticator.serializeUser(serializeUser);
-  authenticator.deserializeUser(deserializeUser);
+  authenticator._sm = sessionManager;
+  authenticator.unuse('session');
+  authenticator.use('session', scheme);
+  
+  // WIP: add the session manager here
   
   return Promise.resolve(authenticator)
     .then(function(authenticator) {
@@ -62,7 +65,7 @@ exports['@singleton'] = true;
 exports['@implements'] = 'module:@authnomicon/session.Authenticator';
 exports['@require'] = [
   '!container',
-  'module:passport.Authenticator~deserializeUserFn',
-  'module:passport.Authenticator~serializeUserFn',
+  './scheme',
+  'module:passport.SessionManager',
   'http://i.bixbyjs.org/Logger'
 ];
