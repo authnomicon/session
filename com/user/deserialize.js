@@ -1,7 +1,7 @@
 exports = module.exports = function() {
-  return function(user, cb) {
+  return function(obj, cb) {
     process.nextTick(function() {
-      return cb(null, user);
+      return cb(null, obj);
     });
   };
 };

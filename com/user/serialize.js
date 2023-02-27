@@ -3,7 +3,10 @@ exports = module.exports = function() {
     // TODO: only do displayName, image, and username
     
     process.nextTick(function() {
-      return cb(null, user);
+      var obj = { id: user.id };
+      if (user.username) { obj.username = user.username; }
+      if (user.displayName) { obj.displayName = user.displayName; }
+      return cb(null, obj);
     });
   };
 };
