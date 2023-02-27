@@ -46,7 +46,7 @@ describe('user/serialize', function() {
         expect(user).to.deep.equal({ id: '703887', displayName: 'Mork Hashimoto', photo: 'http://sample.site.org/photos/12345.jpg' });
         done();
       });
-    }); // should yield object with display name
+    }); // should yield object with photo
     
     it('should yield object without extraneous fields', function(done) {
       serializeFn({ id: '703887', username: 'mhashimoto', birthday: '0000-01-16' }, function(err, user) {
