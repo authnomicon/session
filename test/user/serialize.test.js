@@ -1,5 +1,5 @@
-var factory = require('../../com/user/serialize');
 var expect = require('chai').expect;
+var factory = require('../../com/user/serialize');
 
 
 describe('user/serialize', function() {
