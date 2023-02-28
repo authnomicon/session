@@ -5,7 +5,7 @@ var factory = require('../com/scheme');
 var Strategy = require('passport-multilogin').Strategy;
 
 
-describe('manager', function() {
+describe('scheme', function() {
   
   it('should be annotated', function() {
     expect(factory['@singleton']).to.equal(true);
