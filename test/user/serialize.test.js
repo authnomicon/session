@@ -9,7 +9,7 @@ describe('user/serialize', function() {
   });
   
   
-  describe('created function', function() {
+  describe('serializeUserFn', function() {
     var serializeFn;
     
     before(function() {
@@ -56,6 +56,6 @@ describe('user/serialize', function() {
       });
     }); // should yield object without extraneous fields
     
-  }); // created function
+  }); // serializeUserFn
 
 });

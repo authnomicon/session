@@ -9,7 +9,7 @@ describe('user/deserialize', function() {
   });
   
   
-  describe('created function', function() {
+  describe('deserializeUserFn', function() {
     var deserializeFn;
     
     before(function() {
@@ -47,6 +47,6 @@ describe('user/deserialize', function() {
       });
     }); // should yield object with photos
     
-  }); // created function
+  }); // deserializeUserFn
 
 });
