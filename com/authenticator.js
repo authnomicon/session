@@ -6,6 +6,7 @@ exports = module.exports = function(scheme, manager) {
   authenticator._sm = manager;
   authenticator.unuse('session');
   authenticator.use('session', scheme);
+  // TODO: Use anonymous session here and make scheme strict
   
   return authenticator;
 };
