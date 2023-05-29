@@ -23,7 +23,7 @@ describe('manager', function() {
     
     expect(SessionManagerSpy).to.have.been.calledOnce;
     expect(SessionManagerSpy).to.have.been.calledWithNew;
-    expect(SessionManagerSpy).to.have.been.calledWith(serializeUser);
+    expect(SessionManagerSpy).to.have.been.calledWith({ jsCookie: true }, serializeUser);
     expect(manager).to.be.an.instanceOf(SessionManager);
   });
   

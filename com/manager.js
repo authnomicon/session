@@ -1,7 +1,7 @@
 var SessionManager = require('passport-multilogin').SessionManager;
 
 exports = module.exports = function(serializeUser) {
-  return new SessionManager(serializeUser);
+  return new SessionManager({ jsCookie: true }, serializeUser);
 };
 
 exports['@singleton'] = true;
