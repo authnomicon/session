@@ -5,6 +5,7 @@ exports = module.exports = function() {
       if (user.username) { obj.username = user.username; }
       if (user.displayName) { obj.displayName = user.displayName; }
       if (user.photos) {
+        // TODO: rename this to picture to match OIDC?
         obj.photo = user.photos[0].value;
       }
       return cb(null, obj);
