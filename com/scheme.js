@@ -1,3 +1,4 @@
+// Module dependencies.
 var SessionStrategy = require('passport-multilogin').Strategy;
 
 exports = module.exports = function(deserializeUser) {
