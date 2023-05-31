@@ -29,6 +29,7 @@ exports = module.exports = function(serializeUser) {
   return new SessionManager({ jsCookie: true }, serializeUser);
 };
 
+// Module annotations.
 exports['@singleton'] = true;
 exports['@implements'] = 'module:passport.SessionManager';
 exports['@require'] = [
