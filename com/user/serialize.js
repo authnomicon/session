@@ -1,3 +1,14 @@
+/**
+ * Create user serialization function.
+ *
+ * Returns a function that serializes a user object into a data structure
+ * suitable for serializing into a session.
+ *
+ * The user object is expected to conform to Passport's
+ * {@link https://www.passportjs.org/reference/normalized-profile/ normalized profile}
+ *
+ * @returns {passport.Authenticator~serializeUserFn}
+ */
 exports = module.exports = function() {
   return function(user, cb) {
     process.nextTick(function() {
