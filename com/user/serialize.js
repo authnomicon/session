@@ -3,14 +3,14 @@ exports = module.exports = function() {
     process.nextTick(function() {
       var obj = { id: user.id };
       if (user.username) { obj.username = user.username; }
-      if (user.displayName) { obj.displayName = user.displayName; }
+      if (user.displayName) { obj.name = user.displayName; }
       if (user.photos) {
-        // TODO: rename this to picture to match OIDC?
-        obj.photo = user.photos[0].value;
+        obj.picture = user.photos[0].value;
       }
       return cb(null, obj);
     });
   };
 };
 
+// Module annotations.
 exports['@implements'] = 'module:passport.Authenticator~serializeUserFn';

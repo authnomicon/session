@@ -25,15 +25,15 @@ describe('user/serialize', function() {
       });
     }); // should yield object with username
     
-    it('should yield object with display name', function(done) {
+    it('should yield object with name', function(done) {
       serializeFn({ id: '703887', displayName: 'Mork Hashimoto' }, function(err, user) {
         if (err) { return done(err); }
-        expect(user).to.deep.equal({ id: '703887', displayName: 'Mork Hashimoto' });
+        expect(user).to.deep.equal({ id: '703887', name: 'Mork Hashimoto' });
         done();
       });
-    }); // should yield object with display name
+    }); // should yield object with name
     
-    it('should yield object with photo', function(done) {
+    it('should yield object with picture', function(done) {
       serializeFn({
         id: '703887',
         displayName: 'Mork Hashimoto',
@@ -43,10 +43,10 @@ describe('user/serialize', function() {
         } ],
       }, function(err, user) {
         if (err) { return done(err); }
-        expect(user).to.deep.equal({ id: '703887', displayName: 'Mork Hashimoto', photo: 'http://sample.site.org/photos/12345.jpg' });
+        expect(user).to.deep.equal({ id: '703887', name: 'Mork Hashimoto', picture: 'http://sample.site.org/photos/12345.jpg' });
         done();
       });
-    }); // should yield object with photo
+    }); // should yield object with picture
     
     it('should yield object without extraneous fields', function(done) {
       serializeFn({ id: '703887', username: 'mhashimoto', birthday: '0000-01-16' }, function(err, user) {

@@ -26,7 +26,7 @@ describe('user/deserialize', function() {
     }); // should yield object with username
     
     it('should yield object with display name', function(done) {
-      deserializeFn({ id: '703887', displayName: 'Mork Hashimoto' }, function(err, user) {
+      deserializeFn({ id: '703887', name: 'Mork Hashimoto' }, function(err, user) {
         if (err) { return done(err); }
         expect(user).to.deep.equal({ id: '703887', displayName: 'Mork Hashimoto' });
         done();
@@ -34,7 +34,7 @@ describe('user/deserialize', function() {
     }); // should yield object with display name
     
     it('should yield object with photos', function(done) {
-      deserializeFn({ id: '703887', displayName: 'Mork Hashimoto', photo: 'http://sample.site.org/photos/12345.jpg' }, function(err, user) {
+      deserializeFn({ id: '703887', name: 'Mork Hashimoto', picture: 'http://sample.site.org/photos/12345.jpg' }, function(err, user) {
         if (err) { return done(err); }
         expect(user).to.deep.equal({
           id: '703887',
