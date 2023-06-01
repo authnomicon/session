@@ -48,6 +48,18 @@ describe('user/serialize', function() {
       });
     }); // should yield object with picture
     
+    it('should yield object without picture when photos array is empty', function(done) {
+      serializeFn({
+        id: '703887',
+        displayName: 'Mork Hashimoto',
+        photos: [],
+      }, function(err, user) {
+        if (err) { return done(err); }
+        expect(user).to.deep.equal({ id: '703887', name: 'Mork Hashimoto' });
+        done();
+      });
+    }); // should yield object without picture when photos array is empty
+    
     it('should yield object without extraneous fields', function(done) {
       serializeFn({ id: '703887', username: 'mhashimoto', birthday: '0000-01-16' }, function(err, user) {
         if (err) { return done(err); }

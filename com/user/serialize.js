@@ -25,7 +25,7 @@ exports = module.exports = function() {
       // federated system.
       if (user.username) { obj.username = user.username; }
       if (user.displayName) { obj.name = user.displayName; }
-      if (user.photos) {
+      if (user.photos && user.photos.length > 0) {
         obj.picture = user.photos[0].value;
       }
       return cb(null, obj);
