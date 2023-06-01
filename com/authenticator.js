@@ -1,6 +1,12 @@
 // Module dependencies.
 var passport = require('passport');
 
+/**
+ * Create authenticator that authenticates requests occuring within a login
+ * session.
+ *
+ * @returns {passport.Authenticator}
+ */
 exports = module.exports = function(scheme, manager) {
   var authenticator = new passport.Authenticator();
   authenticator._sm = manager;
