@@ -10,6 +10,12 @@
  * with some revisions to account for the fact that usage is not in a federated
  * context.  This format flattens the structure, reducing its storage size.
  *
+ * This function serializes only the properties that are typically needed by
+ * requests to the majority of endpoints in an application.  This allows
+ * responses from those endpoints to be sent without querying the database for
+ * user information.  Endpoints that need non-serialized properties will need
+ * to query the database.
+ *
  * @returns {passport.Authenticator~serializeUserFn}
  */
 exports = module.exports = function() {
