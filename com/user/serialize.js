@@ -5,14 +5,24 @@
  * suitable for serializing into a session.
  *
  * The user object is expected to conform to Passport's
- * {@link https://www.passportjs.org/reference/normalized-profile/ normalized profile}
+ * {@link https://www.passportjs.org/reference/normalized-profile/ normalized profile}.
+ * It is serialized to a format inspired by OpenID Connect @{link https://openid.net/specs/openid-connect-core-1_0.html#Claims claims},
+ * with some revisions to account for the fact that usage is not in a federated
+ * context.  This format flattens the structure, reducing its storage size.
  *
  * @returns {passport.Authenticator~serializeUserFn}
  */
 exports = module.exports = function() {
   return function(user, cb) {
     process.nextTick(function() {
+      // The user ID is seraialized to an `id` property (rather than `sub` as
+      // defined by OpenID Connect) as the ID is local to this application's
+      // domain, rather than that of a federated system.
       var obj = { id: user.id };
+      // The username is serialized to a `username` property (rather than
+      // `preferred_username` as defined by OpenID Connect), as the username is
+      // local to this application's domain, rather than being suggested by a
+      // federated system.
       if (user.username) { obj.username = user.username; }
       if (user.displayName) { obj.name = user.displayName; }
       if (user.photos) {
