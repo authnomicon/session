@@ -19,7 +19,6 @@ exports = module.exports = function(scheme, manager) {
 
 // Module annotations.
 exports['@singleton'] = true;
-exports['@implements'] = 'module:@authnomicon/session.Authenticator';
 exports['@require'] = [
   './scheme',
   'module:passport.SessionManager'

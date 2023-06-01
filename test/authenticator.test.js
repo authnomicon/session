@@ -9,7 +9,6 @@ describe('authenticator', function() {
   
   it('should be annotated', function() {
     expect(factory['@singleton']).to.equal(true);
-    expect(factory['@implements']).to.equal('module:@authnomicon/session.Authenticator');
   });
   
   it('should construct Authenticator', function() {
