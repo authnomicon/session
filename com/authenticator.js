@@ -19,6 +19,7 @@ exports = module.exports = function(scheme, manager) {
 
 // Module annotations.
 exports['@singleton'] = true;
+exports['@implements'] = 'module:bixby-express.WebAuthenticator';
 exports['@require'] = [
   './scheme',
   'module:passport.SessionManager'
