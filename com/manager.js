@@ -20,7 +20,7 @@ var SessionManager = require('passport-multilogin').SessionManager;
  * functionality such as {@link https://openid.net/specs/openid-connect-session-1_0.html OpenID
  * Connect Session Management}.
  *
- * The session manager supports mulit-login, allowing multiple users to be
+ * The session manager supports multi-login, allowing multiple users to be
  * logged in from the same browser.
  *
  * @returns {passport.SessionManager}
