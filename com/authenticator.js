@@ -9,7 +9,7 @@ var passport = require('passport');
  */
 exports = module.exports = function(scheme, manager) {
   var authenticator = new passport.Authenticator();
-  authenticator._sm = manager;
+  authenticator.sessions(manager);
   authenticator.unuse('session');
   authenticator.use('session', scheme);
   // TODO: Use anonymous session here and make scheme strict
@@ -21,6 +21,6 @@ exports = module.exports = function(scheme, manager) {
 exports['@singleton'] = true;
 exports['@implements'] = 'module:authnomicon.WebAuthenticator';
 exports['@require'] = [
-  './scheme',
+  './schemes/session',
   'module:passport.SessionManager'
 ];
