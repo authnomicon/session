@@ -9,7 +9,7 @@ describe('authenticator', function() {
   
   it('should be annotated', function() {
     expect(factory['@singleton']).to.equal(true);
-    expect(factory['@implements']).to.equal('module:bixby-express.WebAuthenticator');
+    expect(factory['@implements']).to.equal('module:authnomicon.WebAuthenticator');
   });
   
   it('should construct Authenticator', function() {
