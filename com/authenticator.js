@@ -6,7 +6,7 @@ var WebAuthenticator = require('../lib/webauthenticator');
  * Create authenticator that authenticates requests occuring within a login
  * session.
  *
- * @returns {passport.Authenticator}
+ * @returns {authnomicon.WebAuthenticator}
  */
 exports = module.exports = function(sessionScheme, anonymousScheme, manager) {
   var authenticator = new passport.Authenticator();
