@@ -21,7 +21,7 @@
 exports = module.exports = function() {
   return function(user, cb) {
     process.nextTick(function() {
-      // The user ID is seraialized to an `id` property (rather than `sub` as
+      // The user ID is serialized to an `id` property (rather than `sub` as
       // defined by OpenID Connect) as the ID is local to this application's
       // domain, rather than that of a federated system.
       var obj = { id: user.id };
