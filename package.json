@@ -33,6 +33,7 @@
     "namespace": "org.authnomicon/session",
     "components": [
       "manager",
+      "schemes/session",
       "user/deserialize",
       "user/serialize"
     ]
