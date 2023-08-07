@@ -15,7 +15,7 @@ exports = module.exports = function(deserializeUser) {
 
 // Module annotations.
 exports['@singleton'] = true;
-exports['@implements'] = 'http://i.bixbyjs.org/http/auth/Scheme';
+exports['@implements'] = 'module:passport.Strategy';
 exports['@require'] = [
   'module:passport.Authenticator~deserializeUserFn'
 ];

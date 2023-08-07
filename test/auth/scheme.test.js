@@ -9,7 +9,7 @@ describe('auth/scheme', function() {
   
   it('should be annotated', function() {
     expect(factory['@singleton']).to.equal(true);
-    expect(factory['@implements']).to.equal('http://i.bixbyjs.org/http/auth/Scheme');
+    expect(factory['@implements']).to.equal('module:passport.Strategy');
   });
   
   it('should construct Strategy', function() {
