@@ -1,11 +1,11 @@
 var expect = require('chai').expect;
 var $require = require('proxyquire');
 var sinon = require('sinon');
-var factory = require('../../com/schemes/session');
+var factory = require('../../com/auth/scheme');
 var Strategy = require('passport-multilogin').Strategy;
 
 
-describe('schemes/session', function() {
+describe('auth/scheme', function() {
   
   it('should be annotated', function() {
     expect(factory['@singleton']).to.equal(true);
@@ -14,7 +14,7 @@ describe('schemes/session', function() {
   
   it('should construct Strategy', function() {
     var StrategySpy = sinon.spy(Strategy);
-    var factory = $require('../../com/schemes/session', {
+    var factory = $require('../../com/auth/scheme', {
       'passport-multilogin': { Strategy: StrategySpy }
     });
     
