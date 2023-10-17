@@ -1,8 +1,5 @@
 # @authnomicon/session
 
-Reviewed: 2023/10/13 [code]
-
-
 Session management components for the Authnomicon project.
 
 <div align="right">
