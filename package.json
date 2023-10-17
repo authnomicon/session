@@ -1,6 +1,6 @@
 {
   "name": "@authnomicon/session",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Session management components for the Authnomicon project.",
   "keywords": [
     "session"
