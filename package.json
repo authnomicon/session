@@ -34,6 +34,7 @@
     "components": [
       "manager",
       "auth/scheme",
+      "logout/service",
       "user/deserialize",
       "user/serialize"
     ]
@@ -42,6 +43,11 @@
     "com": "com"
   },
   "dependencies": {
+    "body-parser": "^1.20.2",
+    "csurf": "^1.11.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "flowstate": "^0.6.0",
     "passport-multilogin": "^0.0.1"
   },
   "devDependencies": {
