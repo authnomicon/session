@@ -34,7 +34,6 @@
     "components": [
       "manager",
       "auth/scheme",
-      "logout/service",
       "user/deserialize",
       "user/serialize"
     ]
