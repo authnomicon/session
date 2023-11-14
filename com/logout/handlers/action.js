@@ -25,6 +25,6 @@ exports = module.exports = function(authenticator, store) {
 };
 
 exports['@require'] = [
-  'module:@authnomicon/session.Authenticator',
+  'module:passport.Authenticator',
   'module:flowstate.Store'
 ];
