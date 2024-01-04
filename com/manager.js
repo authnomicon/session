@@ -23,6 +23,7 @@ var SessionManager = require('passport-multilogin').SessionManager;
  * The session manager supports multi-login, allowing multiple users to be
  * logged in from the same browser.
  *
+ * @param {passport.Authenticator~serializeUserFn} serializeUser - User serialization function.
  * @returns {passport.SessionManager}
  */
 exports = module.exports = function(serializeUser) {

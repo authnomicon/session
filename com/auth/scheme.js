@@ -7,6 +7,7 @@ var SessionStrategy = require('passport-multilogin').Strategy;
  * Returns an authentication scheme that authenticates a user by verifying login
  * session state.
  *
+ * @param {passport.Authenticator~deserializeUserFn} deserializeUser - User deserialization function.
  * @returns {passport.Strategy}
  */
 exports = module.exports = function(deserializeUser) {
