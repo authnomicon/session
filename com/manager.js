@@ -11,7 +11,7 @@ var SessionManager = require('passport-multilogin').SessionManager;
  * which sets a session ID cookie and stores the state in a backend session
  * store such as {@link https://redis.io/ Redis} or @{link https://memcached.org/ memcached}.
  * The cookie itself is typically HTTP-only, improving security by preventing
- * access by client-side scripts.
+ * access from client-side scripts.
  *
  * Additionally, the session manager sets a login session state cookie, which
  * captures meaningful events such as login, logout, or change of authentication
