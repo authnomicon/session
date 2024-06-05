@@ -20,7 +20,7 @@ The use of a cookie for authentication is particularly well-suited for the
 following scenarios:
 
   - Traditional web applications that perform most of the application logic on
-    the server, and respond to user input submitted via HTML forms.
+    the server and respond to user input submitted via HTML forms.
   - Single-page applications (SPAs) that use of client-side JavaScript to render
     the user interface (UI) and call backend APIs on the _same_ [origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin).
 
