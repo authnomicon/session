@@ -11,6 +11,11 @@ which stores session data server-side in [Redis](https://redis.io/) (via
 (via [`connect-memcached`](https://github.com/balor/connect-memcached)), or
 another compatible [session store](https://github.com/expressjs/session#compatible-session-stores).
 
+A session ID [cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
+is set by `express-session`, which is transmitted back by the user's web browser
+on later requests.  This cookie is a token which is used to look up the
+associated authentication context, which is then used to authorize requests.
+
 <div align="right">
   <sup>Developed by <a href="#authors">Jared Hanson</a>.</sub>
 </div>
