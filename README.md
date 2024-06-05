@@ -16,7 +16,7 @@ is set by `express-session`, which is transmitted back by the user's web browser
 on later requests.  This cookie is a token which is used to look up the
 associated authentication context, which is then used to authorize requests.
 
-The use of a cookie for authentication is particularly well-suited for the
+The use of a cookie for authorization is particularly well-suited for the
 following scenarios:
 
   - Traditional web applications that perform most of the application logic on
