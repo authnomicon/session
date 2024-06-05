@@ -16,6 +16,14 @@ is set by `express-session`, which is transmitted back by the user's web browser
 on later requests.  This cookie is a token which is used to look up the
 associated authentication context, which is then used to authorize requests.
 
+The Authnomicon project uses [Passport](https://www.passportjs.org/) as an
+authentication framework.  Web-based authentication schemes are provided by
+Authnomicon's [authentication](https://github.com/authnomicon/.github#authentication)
+packages.  The authentication session is initiated upon the user authenticating
+with one of these schemes.  Passport's default session manager is replaced by
+the implementation from [`passport-multilogin`](https://github.com/jaredhanson/passport-multilogin),
+allowing simultaneous login to multiple accounts.
+
 <div align="right">
   <sup>Developed by <a href="#authors">Jared Hanson</a>.</sub>
 </div>
