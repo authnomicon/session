@@ -24,6 +24,11 @@ following scenarios:
   - Single-page applications (SPAs) that execute client-side JavaScript to
     render the user interface (UI) and call APIs hosted on the _same_ [origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin).
 
+In both of these scenarios, the cookie can be set with the [HttpOnly](https://owasp.org/www-community/HttpOnly)
+attribute, preventing it from being accessed by JavaScript executing in the
+browser.  This mitigates [cross-site scripting](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting)
+(XSS) exploits.
+
 The Authnomicon project uses [Passport](https://www.passportjs.org/) as an
 authentication framework.  Web-based authentication schemes are provided by
 Authnomicon's [authentication](https://github.com/authnomicon/.github#authentication)
