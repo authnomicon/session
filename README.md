@@ -21,8 +21,8 @@ following scenarios:
 
   - Traditional web applications that perform most of the application logic on
     the server and respond to user input submitted via HTML forms.
-  - Single-page applications (SPAs) that use of client-side JavaScript to render
-    the user interface (UI) and call backend APIs on the _same_ [origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin).
+  - Single-page applications (SPAs) that execute client-side JavaScript to
+    render the user interface (UI) and call APIs hosted on the _same_ [origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin).
 
 The Authnomicon project uses [Passport](https://www.passportjs.org/) as an
 authentication framework.  Web-based authentication schemes are provided by
